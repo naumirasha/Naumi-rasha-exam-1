@@ -1,0 +1,72 @@
+---
+title: "Examj 1"
+author: "NAUMI RASHA"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r}
+library(ggplot2)
+library(tidyverse)
+require(class)
+require(caret)
+load("~/Documents/brfss22/BRFSS2022/BRFSS2022_rev.RData")
+```
+
+```{r}
+> xtabs(~ use_marijan + Age_midpt)
+                         Age_midpt
+use_marijan   21   27   32   37   42   47   52   57   62   67   72   77   82
+          0 3737 3117 3675 4530 5069 4949 6273 6960 8520 9699 9275 7154 7963
+          1 1311  990 1098 1050 1073  828  820  936 1111 1066  758  311  105
+```
+
+
+1)Standard error:623.279
+t-stat:8.5730
+p-value:0.0001
+Conficence interval:95% from 4057 to 6629.77
+Null Hypothesis: the null hypothesis would be that there is no difference in marijuana usage with age
+P-value indicates that there is a extremly signifivant difference between our data.The 95% confidence interval tells us that theres only a 5% chnce of our hypothesis being wrong.The standard error indicates the average error in using our sample mean as an estimate of the real population
+
+
+
+2)Standard error:20435.83506
+t-stat:2.100922
+p-value:0.068839
+confidence interval:5%
+null hypothesis:the null hypothesis would be ther isno differece in the rates of the educational level. 
+the hypothesis would be that there is statistically significance, and that there isnnot enough evidence to reject the null hypothesis
+
+3)Some coclusions we can draw from the data is as the education levels got higher, the more they used marijuana. Graphs can actually clear up some cofusion of how a data can look, when we see the claer picture of the plots we can understand on what the data means better.
+
+
+
+4)the subgroup  I would choose is, some hs, and they data was 2642 zero times and 587 for the other.This subgroup is interesting because they the ones who are still in highschool, not quite finished with it and useing this drug. Its interesting to see how many people use it.
+The hypothesis about this subgroup would be how there is no big difference compared to other subgroups because there is no huge significant difference unlike the data sets for 12 grade of hs,college , and degree. The intersting part of this data would be the comparison or seeing the increase of marijuana use from this point on after.
+
